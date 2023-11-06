@@ -12,9 +12,9 @@ protocol Piece {
     var color: Color { get }
     var source: Position { get }
     var text: String { get }
+    var strategy: PieceStrategy { get }
     
     init(color: Color, source: Position)
     
-    func canMove(to destination: Position, pieces originPieces: [Position: Piece]) -> Bool
     static func postionsCanCreate(of color: Color) -> [Position]
 }

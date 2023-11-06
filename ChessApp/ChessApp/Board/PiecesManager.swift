@@ -8,8 +8,6 @@
 import Foundation
 
 protocol PiecesManagerable {
-    var pieces: [Position: Piece] { get }
-    
     func resetPieces()
     func piece(at position: Position) -> Piece?
     func update(from source: Position, to destination: Position)
@@ -18,7 +16,7 @@ protocol PiecesManagerable {
 }
 
 final class PieceManager: PiecesManagerable {
-    private(set) var pieces: [Position: Piece] = [:]
+    private var pieces: [Position: Piece] = [:]
     
     func resetPieces() {
         self.pieces = self.makePieces()

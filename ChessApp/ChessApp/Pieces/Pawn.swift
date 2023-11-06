@@ -21,36 +21,14 @@ struct Pawn: Piece {
         }
     }
     
-    func canMove(to position: Position, pieces originPieces: [Position: Piece]) -> Bool {
-        guard self.isSame(file: position.file) else {
-            return false
-        }
-
-        guard self.canMove(to: position.rank) else {
-            return false
-        }
-        
-        return true
+    var strategy: PieceStrategy {
+        return Pawn.Strategy(source: self.source, color: self.color)
     }
     
     private func isSame(file: File) -> Bool {
         return self.source.file == file
     }
-    
-    private func canMove(to destinationRank: Rank) -> Bool {
-        let currentRank = self.source.rank
-        guard abs(currentRank.distance(with: destinationRank)) == 1 else {
-            return false
-        }
         
-        switch self.color {
-        case .black:
-            return currentRank < destinationRank
-        case .white:
-            return currentRank > destinationRank
-        }
-    }
-    
     static func postionsCanCreate(of color: Color) -> [Position] {
         switch color {
         case .black:

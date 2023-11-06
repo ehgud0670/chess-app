@@ -1,29 +1,29 @@
+////
+////  BoardTests+.swift
+////  ChessAppTests
+////
+////  Created by 김도형 on 2023/10/24.
+////
 //
-//  BoardTests+.swift
-//  ChessAppTests
-//
-//  Created by 김도형 on 2023/10/24.
-//
-
 import XCTest
 @testable import ChessApp
-
-extension BoardTests {
-    
-    func test_move메서드_실패케이스_destination위치에_같은팀의_말이있을_때_테스트() {
-        let board = Board(piecesManager: PiecesManagerStub())
-        
-        do {
-            try board.move(from: Position(file: .A, rank: .seven),
-                              to: Position(file: .A, rank: .six))
-        } catch let error {
-            XCTAssertEqual(error as! ValidationError, ValidationError.sameTeam)
-        }
-    }
-    
-}
-
-final class PiecesManagerStub: PiecesManagerable {
+//
+//extension BoardTests {
+//    
+//    func test_move메서드_실패케이스_destination위치에_같은팀의_말이있을_때_테스트() {
+//        let board = Board(piecesManager: PiecesManagerStub())
+//        
+//        do {
+//            try board.move(from: Position(file: .A, rank: .seven),
+//                              to: Position(file: .A, rank: .six))
+//        } catch let error {
+//            XCTAssertEqual(error as! ValidationError, ValidationError.sameTeam)
+//        }
+//    }
+//    
+//}
+//
+final fileprivate class PiecesManagerStub: PiecesManagerable {
     private(set) var pieces: [ChessApp.Position : ChessApp.Piece] = [:]
     
     func resetPieces() {

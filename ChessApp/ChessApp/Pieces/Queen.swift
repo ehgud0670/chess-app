@@ -21,6 +21,10 @@ struct Queen: Piece {
         }
     }
     
+    var strategy: PieceStrategy {
+        return Queen.Strategy(source: self.source, color: self.color)
+    }
+    
     func canMove(to destination: Position, pieces originPieces: [Position : Piece]) -> Bool {
         guard self.source != destination else {
             return false
@@ -47,17 +51,6 @@ struct Queen: Piece {
         case .white:
             return [Position(file: .E, rank: .eight)]
         }
-    }
-    
-    enum Direction {
-        case up
-        case down
-        case left
-        case right
-        case upAndLeft
-        case upAndRight
-        case downAndLeft
-        case downAndRight
     }
     
 }
