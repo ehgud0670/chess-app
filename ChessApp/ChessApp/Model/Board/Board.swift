@@ -20,7 +20,7 @@ final class Board: BoardConfigurable {
     private(set) var turnColor: Color = .white
     private let piecesManager: PiecesManagerable
     
-    init(piecesManager: PiecesManagerable) {
+    init(piecesManager: PiecesManagerable = PieceManager()) {
         self.piecesManager = piecesManager
         self.piecesManager.resetPieces()
     }

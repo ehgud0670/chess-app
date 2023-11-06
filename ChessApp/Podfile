@@ -9,6 +9,7 @@ target 'ChessApp' do
 
   pod 'RxSwift', '6.0'
   pod 'RxCocoa', '6.0'
+  pod 'SnapKit'
 
   target 'ChessAppTests' do
     inherit! :search_paths

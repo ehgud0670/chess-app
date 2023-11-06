@@ -35,6 +35,13 @@
 		895A60BA2AF8CF84001528BC /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A60B92AF8CF84001528BC /* UIColor+.swift */; };
 		895A60BF2AF8D7DB001528BC /* BoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A60BE2AF8D7DB001528BC /* BoardViewModel.swift */; };
 		895A60C12AF8D9FF001528BC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A60C02AF8D9FF001528BC /* ViewModel.swift */; };
+		895A60C42AF8DD3C001528BC /* BoardViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A60C32AF8DD3C001528BC /* BoardViewController+DataSource.swift */; };
+		895A60C92AF8DDC3001528BC /* BoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A60C82AF8DDC3001528BC /* BoardCollectionViewCell.swift */; };
+		895A60CB2AF8DF0F001528BC /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A60CA2AF8DF0F001528BC /* UICollectionView+.swift */; };
+		895A60CD2AF8DFCE001528BC /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A60CC2AF8DFCE001528BC /* Reusable.swift */; };
+		895A60CF2AF8E6AF001528BC /* BoardLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A60CE2AF8E6AF001528BC /* BoardLayoutGuide.swift */; };
+		895A60D12AF8E8A4001528BC /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A60D02AF8E8A4001528BC /* DeviceInfo.swift */; };
+		895A60D32AF8ECFC001528BC /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A60D22AF8ECFC001528BC /* ScoreView.swift */; };
 		8962896D2ADF1FA900D31D25 /* BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8962896C2ADF1FA900D31D25 /* BoardTests.swift */; };
 		8962896F2ADF2C2E00D31D25 /* InputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8962896E2ADF2C2E00D31D25 /* InputError.swift */; };
 		896289712ADFC19600D31D25 /* InputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896289702ADFC19600D31D25 /* InputManager.swift */; };
@@ -90,6 +97,13 @@
 		895A60B92AF8CF84001528BC /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		895A60BE2AF8D7DB001528BC /* BoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewModel.swift; sourceTree = "<group>"; };
 		895A60C02AF8D9FF001528BC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		895A60C32AF8DD3C001528BC /* BoardViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoardViewController+DataSource.swift"; sourceTree = "<group>"; };
+		895A60C82AF8DDC3001528BC /* BoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewCell.swift; sourceTree = "<group>"; };
+		895A60CA2AF8DF0F001528BC /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
+		895A60CC2AF8DFCE001528BC /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		895A60CE2AF8E6AF001528BC /* BoardLayoutGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardLayoutGuide.swift; sourceTree = "<group>"; };
+		895A60D02AF8E8A4001528BC /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		895A60D22AF8ECFC001528BC /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		8962896B2ADF1FA900D31D25 /* ChessAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChessAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		8962896C2ADF1FA900D31D25 /* BoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTests.swift; sourceTree = "<group>"; };
 		8962896E2ADF2C2E00D31D25 /* InputError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputError.swift; sourceTree = "<group>"; };
@@ -208,10 +222,11 @@
 			children = (
 				8957D9CA2ADD15F900B7606D /* AppDelegate.swift */,
 				8957D9CC2ADD15F900B7606D /* SceneDelegate.swift */,
-				8957D9CE2ADD15F900B7606D /* BoardViewController.swift */,
+				895A60B82AF8CF77001528BC /* Extension */,
+				895A60C72AF8DDB3001528BC /* View */,
+				895A60C22AF8DD10001528BC /* ViewController */,
 				895A60BD2AF8D7D0001528BC /* ViewModel */,
 				895A60BB2AF8D732001528BC /* Model */,
-				895A60B82AF8CF77001528BC /* Extension */,
 				895A60BC2AF8D75D001528BC /* Error */,
 				8957D9D32ADD15FD00B7606D /* Assets.xcassets */,
 				8957D9D52ADD15FD00B7606D /* LaunchScreen.storyboard */,
@@ -235,6 +250,7 @@
 		895A60B82AF8CF77001528BC /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				895A60CA2AF8DF0F001528BC /* UICollectionView+.swift */,
 				893F521F2AEA5E5000CA3E68 /* Array+.swift */,
 				895A60B92AF8CF84001528BC /* UIColor+.swift */,
 			);
@@ -268,6 +284,27 @@
 				895A60BE2AF8D7DB001528BC /* BoardViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		895A60C22AF8DD10001528BC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8957D9CE2ADD15F900B7606D /* BoardViewController.swift */,
+				895A60C32AF8DD3C001528BC /* BoardViewController+DataSource.swift */,
+				895A60CE2AF8E6AF001528BC /* BoardLayoutGuide.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		895A60C72AF8DDB3001528BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				895A60CC2AF8DFCE001528BC /* Reusable.swift */,
+				895A60D22AF8ECFC001528BC /* ScoreView.swift */,
+				895A60C82AF8DDC3001528BC /* BoardCollectionViewCell.swift */,
+				895A60D02AF8E8A4001528BC /* DeviceInfo.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BD7285255FEAFAF9D6B1C5F4 /* Frameworks */ = {
@@ -453,22 +490,29 @@
 				8957D9CF2ADD15F900B7606D /* BoardViewController.swift in Sources */,
 				893F520D2AEA293B00CA3E68 /* Knight.swift in Sources */,
 				895A60BA2AF8CF84001528BC /* UIColor+.swift in Sources */,
+				895A60D32AF8ECFC001528BC /* ScoreView.swift in Sources */,
 				8962896F2ADF2C2E00D31D25 /* InputError.swift in Sources */,
 				8957D9CB2ADD15F900B7606D /* AppDelegate.swift in Sources */,
 				89B5A00C2ADEF9EF007A1988 /* Board.swift in Sources */,
 				893F520B2AEA287200CA3E68 /* Queen.swift in Sources */,
+				895A60C42AF8DD3C001528BC /* BoardViewController+DataSource.swift in Sources */,
+				895A60C92AF8DDC3001528BC /* BoardCollectionViewCell.swift in Sources */,
 				893F52202AEA5E5000CA3E68 /* Array+.swift in Sources */,
 				89B5A00F2ADEFA46007A1988 /* Pawn.swift in Sources */,
 				894F37212AF34DD20086E869 /* PieceStrategy.swift in Sources */,
 				8957D9CD2ADD15F900B7606D /* SceneDelegate.swift in Sources */,
 				893F52052AEA262A00CA3E68 /* Piece.swift in Sources */,
+				895A60CF2AF8E6AF001528BC /* BoardLayoutGuide.swift in Sources */,
 				895A60BF2AF8D7DB001528BC /* BoardViewModel.swift in Sources */,
 				896289732ADFCAD300D31D25 /* ValidationError.swift in Sources */,
 				89B5A0112ADEFBCC007A1988 /* Color.swift in Sources */,
 				893F52072AEA268A00CA3E68 /* Bishop.swift in Sources */,
+				895A60CB2AF8DF0F001528BC /* UICollectionView+.swift in Sources */,
 				89B5A0132ADEFD55007A1988 /* Position.swift in Sources */,
+				895A60D12AF8E8A4001528BC /* DeviceInfo.swift in Sources */,
 				8908800A2AE737AB0049E578 /* Rank.swift in Sources */,
 				89B5A0152ADF0BF3007A1988 /* PiecesManager.swift in Sources */,
+				895A60CD2AF8DFCE001528BC /* Reusable.swift in Sources */,
 				895A60C12AF8D9FF001528BC /* ViewModel.swift in Sources */,
 				893F521C2AEA318D00CA3E68 /* DistanceCalculatable.swift in Sources */,
 			);
